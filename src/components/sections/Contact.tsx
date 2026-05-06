@@ -3,7 +3,14 @@
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 // import { personalInfo } from "@/lib/data";
-import { FaEnvelope, FaPaperPlane, FaClock, FaGithub, FaLinkedin } from "react-icons/fa6";
+import {
+  FaEnvelope,
+  FaPaperPlane,
+  FaClock,
+  FaGithub,
+  FaLinkedin,
+  FaWhatsapp,
+} from "react-icons/fa6";
 import { personalInfo } from "../../../lib/data";
 
 type FormData = {
@@ -75,6 +82,7 @@ export default function Contact() {
                 {[
                   { icon: FaGithub, href: personalInfo.github },
                   { icon: FaLinkedin, href: personalInfo.linkedin },
+                  { icon: FaWhatsapp, href: personalInfo.whatsapp },
                 ].map((social, i) => (
                   <a
                     key={i}

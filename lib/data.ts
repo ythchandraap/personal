@@ -26,6 +26,7 @@ export const personalInfo = {
   phone: "+62 857 0038 3103",
   github: "https://github.com/ythchandraap",
   linkedin: "https://www.linkedin.com/in/ythchandraap",
+  whatsapp: "https://wa.me/6285700383103",
 };
 
 export const skills = [
