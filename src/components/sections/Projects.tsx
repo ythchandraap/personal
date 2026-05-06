@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { FiExternalLink, FiArrowUpRight } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa6";
 import { projects } from "../../../lib/data";
+import Image from "next/image";
 
 export default function Projects() {
   return (
@@ -58,7 +59,7 @@ interface Project {
   description: string;
   tech: string[];
   link: string;
-  github: string;
+  github: string | null;
   image: string;
   featured?: boolean;
 }
@@ -73,7 +74,15 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       className="group relative bg-white/[0.03] border border-white/5 rounded-3xl overflow-hidden hover:border-accent/50 transition-all duration-500"
     >
       <div className="aspect-video relative overflow-hidden bg-white/5">
-        {/* Placeholder for project image with overlay */}
+        {/* Project Image */}
+        <Image
+          src={project.image}
+          alt={project.title}
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-110"
+        />
+
+        {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
 
         {/* Project Type Badge */}
@@ -102,12 +111,15 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             {project.title}
           </h3>
           <div className="flex gap-4">
-            <a
-              href={project.github}
-              className="text-white/40 hover:text-white transition-colors"
-            >
-              <FaGithub size={20} />
-            </a>
+            {project.github && (
+              <a
+                href={project.github}
+                className="text-white/40 hover:text-white transition-colors"
+              >
+                <FaGithub size={20} />
+              </a>
+            )}
+
             <a
               href={project.link}
               className="text-white/40 hover:text-white transition-colors"

@@ -9,12 +9,6 @@ export default function Footer() {
   return (
     <footer className="py-12 px-6 border-t border-white/5 bg-black">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-        <div>
-          <p className="text-white/40 text-sm">
-            © {currentYear} {personalInfo.name}. All rights reserved.
-          </p>
-        </div>
-
         <div className="flex items-center gap-2 text-sm text-white/40">
           Built with <span className="text-white font-medium">Next.js 15</span>{" "}
           & <span className="text-accent animate-pulse">❤️</span>
