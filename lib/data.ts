@@ -27,6 +27,7 @@ export const personalInfo = {
   github: "https://github.com/ythchandraap",
   linkedin: "https://www.linkedin.com/in/ythchandraap",
   whatsapp: "https://wa.me/6285700383103",
+  test: null,
 };
 
 export const skills = [
