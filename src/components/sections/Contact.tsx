@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 // import { personalInfo } from "@/lib/data";
-import { Mail, Send, Clock } from "lucide-react";
+import { FaEnvelope, FaPaperPlane, FaClock, FaGithub, FaLinkedin } from "react-icons/fa6";
 import { personalInfo } from "../../../lib/data";
 
 type FormData = {
@@ -49,7 +49,7 @@ export default function Contact() {
             >
               <div className="flex items-center gap-4 text-white/60">
                 <div className="p-3 rounded-full bg-white/5 border border-white/10 text-accent">
-                  <Mail size={24} />
+                  <FaEnvelope size={24} />
                 </div>
                 <div>
                   <p className="text-sm font-medium text-white/40 uppercase tracking-widest">
@@ -61,7 +61,7 @@ export default function Contact() {
 
               <div className="flex items-center gap-4 text-white/60">
                 <div className="p-3 rounded-full bg-white/5 border border-white/10 text-accent">
-                  <Clock size={24} />
+                  <FaClock size={24} />
                 </div>
                 <div>
                   <p className="text-sm font-medium text-white/40 uppercase tracking-widest">
@@ -73,8 +73,8 @@ export default function Contact() {
 
               <div className="pt-8 flex gap-4">
                 {[
-                  { icon: Send, href: personalInfo.github },
-                  { icon: Send, href: personalInfo.linkedin },
+                  { icon: FaGithub, href: personalInfo.github },
+                  { icon: FaLinkedin, href: personalInfo.linkedin },
                 ].map((social, i) => (
                   <a
                     key={i}
@@ -135,7 +135,7 @@ export default function Contact() {
                 className="w-full group relative flex items-center justify-center gap-3 bg-accent text-white font-bold py-5 rounded-xl overflow-hidden hover:scale-[1.02] active:scale-[0.98] transition-all"
               >
                 <span>Send Message</span>
-                <Send
+                <FaPaperPlane
                   size={18}
                   className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
                 />

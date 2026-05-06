@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-// import { personalInfo } from "../../lib/data";
 import { personalInfo } from "../../../lib/data";
-import { Mail, ArrowDownRight, ExternalLink } from "lucide-react";
+import { FaArrowRight, FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa6";
+import { FiArrowUpRight } from "react-icons/fi";
 
 export default function Hero() {
   return (
@@ -53,7 +53,7 @@ export default function Hero() {
           >
             <span className="relative z-10 flex items-center gap-2">
               View My Work{" "}
-              <ArrowDownRight
+              <FaArrowRight
                 size={20}
                 className="group-hover:rotate-45 transition-transform"
               />
@@ -64,7 +64,7 @@ export default function Hero() {
             className="group relative px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-bold rounded-full border border-white/10 overflow-hidden transition-all hover:scale-105 active:scale-95"
           >
             <span className="relative z-10 flex items-center gap-2">
-              Hire Me <ExternalLink size={18} />
+              Hire Me <FiArrowUpRight size={18} />
             </span>
           </a>
         </motion.div>
@@ -78,9 +78,9 @@ export default function Hero() {
         className="absolute bottom-12 flex gap-6"
       >
         {[
-          { icon: Mail, href: personalInfo.github },
-          { icon: Mail, href: personalInfo.linkedin },
-          { icon: Mail, href: `mailto:${personalInfo.email}` },
+          { icon: FaGithub, href: personalInfo.github },
+          { icon: FaLinkedin, href: personalInfo.linkedin },
+          { icon: FaEnvelope, href: `mailto:${personalInfo.email}` },
         ].map((social, index) => (
           <a
             key={index}
@@ -100,7 +100,7 @@ export default function Hero() {
         transition={{ duration: 2, repeat: Infinity }}
         className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/20"
       >
-        <ArrowDownRight size={24} className="rotate-45" />
+        <FaArrowRight size={24} className="rotate-90" />
       </motion.div>
     </section>
   );

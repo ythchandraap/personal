@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUp } from "lucide-react";
+import { FaArrowUp } from "react-icons/fa6";
 import { personalInfo } from "../../../lib/data";
 
 export default function Footer() {
@@ -24,7 +24,7 @@ export default function Footer() {
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="p-3 rounded-full bg-white/5 border border-white/10 hover:bg-accent hover:text-white transition-all group"
         >
-          <ArrowUp
+          <FaArrowUp
             size={20}
             className="group-hover:-translate-y-1 transition-transform"
           />

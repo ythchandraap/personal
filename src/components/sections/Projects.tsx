@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, ArrowUpRight } from "lucide-react";
+import { FiExternalLink, FiArrowUpRight } from "react-icons/fi";
+import { FaGithub } from "react-icons/fa6";
 import { projects } from "../../../lib/data";
 
 export default function Projects() {
@@ -90,7 +91,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black font-bold text-sm hover:scale-110 transition-transform"
           >
-            View Project <ArrowUpRight size={16} />
+            View Project <FiArrowUpRight size={16} />
           </a>
         </div>
       </div>
@@ -105,13 +106,13 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               href={project.github}
               className="text-white/40 hover:text-white transition-colors"
             >
-              <ExternalLink size={20} />
+              <FaGithub size={20} />
             </a>
             <a
               href={project.link}
               className="text-white/40 hover:text-white transition-colors"
             >
-              <ExternalLink size={20} />
+              <FiExternalLink size={20} />
             </a>
           </div>
         </div>
